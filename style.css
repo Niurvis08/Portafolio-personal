@@ -1,0 +1,132 @@
+:root {
+    /* Colores Light Mode por defecto */
+    --primary-color: #007bff;
+    --bg-light: #f8f9fa;
+    --text-light: #212529; /* Color de texto oscuro en modo light */
+    --bg-dark: #343a40;
+    --text-dark: #f8f9fa; /* Color de texto claro en modo dark */
+
+    /* Variables para Dark Mode (se sobreescriben en body.dark) */
+    --current-bg: var(--bg-light);
+    --current-text: var(--text-light);
+
+    /* Animación Hero */
+    --color-one: #ee7752;
+    --color-two: #e73c7e;
+    --color-three: #23a6d5;
+    --color-four: #23d5ab;
+}
+
+/* Transición suave para el cambio de modo */
+body {
+    transition: background-color 0.3s, color 0.3s;
+    background-color: var(--current-bg);
+    color: var(--current-text);
+}
+
+/* Sobreescritura de variables para Dark Mode */
+body.dark {
+    --current-bg: var(--bg-dark);
+    --current-text: var(--text-dark); /* El texto será claro en dark mode */
+
+    background-color: var(--current-bg);
+    color: var(--current-text);
+}
+
+/* Correcciones y Overrides para Dark Mode (asegurando el texto claro) */
+body.dark .bg-light {
+    background: var(--current-bg) !important; /* El fondo claro debe volverse oscuro */
+}
+
+body.dark .card,
+body.dark .form-control {
+    background: var(--current-bg);
+    color: var(--current-text);
+    border-color: var(--primary-color);
+}
+
+body.dark .navbar {
+    background: var(--current-bg) !important;
+}
+
+body.dark .navbar-brand,
+body.dark .nav-link,
+body.dark .github-link i, /* Icono de GitHub en dark mode */
+body.dark i,
+body.dark .text-muted,
+body.dark .form-label {
+    color: var(--current-text) !important;
+}
+
+/* Animación del Hero (Gradient) */
+.hero-section {
+    background: linear-gradient(-45deg, var(--color-one), var(--color-two), var(--color-three), var(--color-four));
+    background-size: 400% 400%;
+    animation: gradientShift 15s infinite;
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Animación y Estilo de Componentes */
+
+/* Animación fadeInUp para h1 */
+.animated-h1 {
+    opacity: 0;
+    animation: fadeInUp 1.5s forwards 0.5s;
+}
+
+.animated-p {
+    opacity: 0;
+    animation: fadeInUp 1.5s forwards 1.0s;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translate3d(0, 40px, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+/* Tarjetas de Proyectos */
+.project-card, .experience-card {
+    border: 2px solid var(--primary-color) !important;
+    transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 1rem 3rem rgba(0,0,0,.175)!important;
+    animation: none; /* Detiene heartbeat al hacer hover */
+}
+
+.project-card {
+    animation: heartbeat 3s infinite;
+}
+
+@keyframes heartbeat {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.02); }
+    100% { transform: scale(1); }
+}
+
+/* Responsive Ajustments */
+@media (max-width: 768px) {
+    .display-3 {
+        font-size: 2.5rem;
+    }
+    .lead {
+        font-size: 1rem;
+    }
+    .profile-img {
+        width: 150px;
+        height: 150px;
+    }
+}
