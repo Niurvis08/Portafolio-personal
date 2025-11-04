@@ -1,100 +1,220 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portafolio profesional de Niurvis Araujo, estudiante de ingeniería de sistemas y computación. Descubre mis proyectos y experiencia.">
-    <meta name="keywords" content="portafolio, web, frontend, desarrollador, React, HTML5, CSS3, JavaScript, Bootstrap, N">
-    <meta name="author" content="Niurvis Araujo (Ficticio)">
-    <title>Niurvis Araujo | Estudiante de ingeniería de sistemas y computación</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Portafolio profesional de Niurvis Araujo, estudiante de ingeniería de sistemas y computación. Descubre mis proyectos y experiencia.">
+  <meta name="keywords" content="portafolio, web, frontend, desarrollador, React, HTML5, CSS3, JavaScript, Bootstrap">
+  <meta name="author" content="Niurvis Araujo">
+  <title>Niurvis Araujo | Estudiante de ingeniería de sistemas y computación</title>
 
-    <!-- Bootstrap + FontAwesome -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    
-    <!-- Tu hoja de estilos -->
-    <link rel="stylesheet" href="style.css">
+  <!-- Bootstrap + Font Awesome -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Tu CSS -->
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body data-bs-spy="scroll" data-bs-target="#main-nav" data-bs-offset="50">
 
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="main-nav">
-        <div class="container">
-            <a class="navbar-brand" href="#home">JP <i class="fas fa-code"></i></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
+  <!-- NAV -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="main-nav" aria-label="Navegación principal del portafolio">
+    <div class="container">
+      <a class="navbar-brand" href="#home">JP <i class="fas fa-code"></i></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link smooth-scroll" href="#home">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link smooth-scroll" href="#about">Sobre Mí</a></li>
+          <li class="nav-item"><a class="nav-link smooth-scroll" href="#projects">Proyectos</a></li>
+          <li class="nav-item"><a class="nav-link smooth-scroll" href="#experience">Experiencia</a></li>
+          <li class="nav-item"><a class="nav-link smooth-scroll" href="#contact">Contacto</a></li>
+          <li class="nav-item ms-lg-3">
+            <button class="btn btn-outline-light" id="darkModeToggle" aria-label="Alternar modo oscuro">
+              <i class="fas fa-moon"></i>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#home">Inicio</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#about">Sobre Mí</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#projects">Proyectos</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#experience">Experiencia</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contacto</a></li>
-                    <li class="nav-item ms-lg-3">
-                        <button class="btn btn-outline-light" id="darkModeToggle" aria-label="Alternar modo oscuro">
-                            <i class="fas fa-moon"></i>
-                        </button>
-                    </li>
-                </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header id="home" class="d-flex align-items-center justify-content-center text-center vh-100 hero-section">
+    <div class="container">
+      <img src="https://img.freepik.com/vector-premium/desarrolladora-web-mujer-trabajando-computadora-portatil_885922-253.jpg" alt="Avatar de desarrollador" class="img-fluid rounded-circle mb-4 profile-img" width="200" height="200">
+      <h1 class="display-3 fw-bold mb-3 animated-h1">Niurvis Araujo</h1>
+      <p class="lead mb-4 fw-light animated-p">Estudiante de Ingeniería de Sistemas y Computación | <span class="fw-bolder">2+ años</span> desarrollando habilidades prácticas y proyectos web. ¡Listo para despegar! 🚀</p>
+      <a href="#projects" class="btn btn-primary btn-lg rounded-pill smooth-scroll">Ver Proyectos</a>
+    </div>
+  </header>
+
+  <!-- ABOUT -->
+  <section id="about" class="py-5">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-12 text-center mb-5">
+          <h2 class="display-5 mb-4"><i class="fas fa-user text-primary me-2"></i> Sobre Mí</h2>
+          <p class="lead">Soy Niurvis Araujo, una estudiante de Ingeniería de Sistemas y Computación. Apasionada por la tecnología, la innovación y el desarrollo de soluciones digitales que optimicen procesos y mejoren la calidad de vida. Poseo gran interés por la inteligencia artificial y la ciberseguridad. Me caracterizo por mi capacidad analítica, el pensamiento lógico y la constante búsqueda de nuevos conocimientos.</p>
+        </div>
+      </div>
+      <div class="row text-center">
+        <div class="col-md-4 mb-4">
+          <i class="fas fa-laptop-code fa-3x text-primary mb-3"></i>
+          <h5>Pensamiento analítico</h5>
+          <p>Capacidad para crear código de alta calidad, estructurado y probado.</p>
+        </div>
+        <div class="col-md-4 mb-4">
+          <i class="fas fa-users fa-3x text-primary mb-3"></i>
+          <h5>Trabajo en equipo</h5>
+          <p>Excelente comunicación eficaz en entornos de colaboración remota.</p>
+        </div>
+        <div class="col-md-4 mb-4">
+          <i class="fas fa-bullseye fa-3x text-primary mb-3"></i>
+          <h5>Aprendizaje continuo</h5>
+          <p>Mentalidad de negocio enfocada en obtener resultados.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS (resumido) -->
+  <section id="projects" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="display-5 text-center mb-5"><i class="fas fa-project-diagram text-primary me-2"></i> Proyectos Destacados</h2>
+      <div class="row">
+        <!-- Cards (mantengo tus imágenes y textos) -->
+        <div class="col-md-4 mb-4">
+          <div class="card project-card h-100 border-2">
+            <img src="https://tse3.mm.bing.net/th/id/OIP.pNKDH27Sjb0RVWGwZZ5aEAHaFw?cb=12&rs=1&pid=ImgDetMain&o=7&rm=3" class="card-img-top" alt="E-commerce moderno y responsive">
+            <div class="card-body">
+              <h5 class="card-title">Sistema de Gestión de Inventario (SaaS)</h5>
+              <p class="card-text text-muted">Vue.js (o React), Node.js (Express), PostgreSQL, JWT Auth.</p>
+              <p>Herramienta SaaS simulada para gestionar stock y flujo de productos. Enfoque en la seguridad (JWT) y diseño de BD relacional para transacciones.</p>
+              <a href="#" class="btn btn-primary">Ver Proyecto</a>
             </div>
+          </div>
         </div>
-    </nav>
-
-    <!-- Secciones principales (solo dejo la parte del contacto que importa para el cambio) -->
-
-    <section id="contact" class="py-5 bg-light">
-        <div class="container">
-            <h2 class="display-5 text-center mb-5"><i class="fas fa-envelope text-primary me-2"></i> Contáctame</h2>
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <form id="contactForm">
-                        <div class="mb-3">
-                            <label for="name" class="form-label">Nombre:</label>
-                            <input type="text" class="form-control" id="name" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="email" class="form-label">Email:</label>
-                            <input type="email" class="form-control" id="email" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="message" class="form-label">Mensaje:</label>
-                            <textarea class="form-control" id="message" rows="5" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary w-100">Enviar Mensaje</button>
-                    </form>
-
-                    <!-- Redes Sociales -->
-                    <div class="text-center mt-5">
-                        <h5 class="mb-3">Conéctate en Redes</h5>
-                        <a href="https://www.linkedin.com/feed/" target="_blank" class="me-4" aria-label="LinkedIn">
-                            <i class="fab fa-linkedin fa-2x text-primary"></i>
-                        </a>
-                        <!-- ✅ GitHub corregido -->
-                        <a href="https://github.com/Niurvis08/Portafolio-personal" target="_blank" class="me-4 github-link" aria-label="GitHub">
-                            <i class="fab fa-github fa-2x"></i>
-                        </a>
-                        <a href="https://x.com/" target="_blank" class="me-4" aria-label="Twitter">
-                            <i class="fab fa-twitter fa-2x text-info"></i>
-                        </a>
-                        <a href="https://www.instagram.com/ndilone08/?next=%2F" target="_blank" aria-label="Instagram">
-                            <i class="fab fa-instagram fa-2x text-danger"></i>
-                        </a>
-                    </div>
-                </div>
+        <!-- Repite las otras tarjetas tal cual -->
+        <div class="col-md-4 mb-4">
+          <div class="card project-card h-100 border-2">
+            <img src="https://www.k-tuin.com/media/wysiwyg/blog/2021/Febrero/buscador-de-peliculas-en-plataformas-netflinity.png" class="card-img-top" alt="Dashboard de gestión de datos">
+            <div class="card-body">
+              <h5 class="card-title">Buscador de Películas y Series (API Externa)</h5>
+              <p class="card-text text-muted">React/Vue.js, Fetch API/Axios, CSS Grid/Flexbox.</p>
+              <p>Plataforma de consulta y filtrado de contenido audiovisual. Desafío: consumo asíncrono eficiente de API pública.</p>
+              <a href="#" class="btn btn-primary">Ver Proyecto</a>
             </div>
+          </div>
         </div>
-    </section>
 
-    <footer class="bg-dark text-white py-4 text-center">
-        <div class="container">
-            <p class="mb-0">© 2025 Niurvis Araujo. Hecho con <i class="fas fa-heart text-danger"></i> y código limpio.</p>
+        <div class="col-md-4 mb-4">
+          <div class="card project-card h-100 border-2">
+            <img src="https://tse3.mm.bing.net/th/id/OIP.LsNCYB0gG-bpyXTHjAeB5wHaEo?cb=12&rs=1&pid=ImgDetMain&o=7&rm=3" class="card-img-top" alt="Aplicación móvil de seguimiento de fitness">
+            <div class="card-body">
+              <h5 class="card-title">Visualizador de Datos Geográficos (Mapas)</h5>
+              <p class="card-text text-muted">Vanilla JavaScript, Leaflet.js, APIs REST Geográficas.</p>
+              <p>Aplicación para visualizar datos geoespaciales en un mapa interactivo con consumo de GeoJSON.</p>
+              <a href="#" class="btn btn-primary">Ver Proyecto</a>
+            </div>
+          </div>
         </div>
-    </footer>
 
-    <!-- Scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="script.js"></script>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience" class="py-5">
+    <div class="container">
+      <h2 class="display-5 text-center mb-5"><i class="fas fa-briefcase text-primary me-2"></i> Experiencia</h2>
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <div class="card experience-card h-100 border-primary shadow-sm text-center p-3">
+            <i class="fas fa-building fa-3x text-primary mb-3 mx-auto"></i>
+            <h5 class="card-tit">Desarrollador de Aplicaciones Web</h5>
+            <p class="fw-bold">Proyecto final</p>
+            <p class="text-muted">Septiembre 2025 - Presente</p>
+            <p>Diseñé y construí la arquitectura Full-Stack de una herramienta de gestión. Implementación de autenticación segura (JWT).</p>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+          <div class="card experience-card h-100 border-primary shadow-sm text-center p-3">
+            <i class="fas fa-building fa-3x text-primary mb-3 mx-auto"></i>
+            <h5 class="card-title">Desarrollador Frontend & Backend (Firebase)</h5>
+            <p class="fw-bold">Materia de Desarrollo Web Avanzado</p>
+            <p class="text-muted">Enero 2025 - Abril 2025</p>
+            <p>Prototipo de red social con backend en tiempo real usando Firebase/Firestore.</p>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+          <div class="card experience-card h-100 border-primary shadow-sm text-center p-3">
+            <i class="fas fa-building fa-3x text-primary mb-3 mx-auto"></i>
+            <h5 class="card-title">Ingeniero de Datos y Visualización</h5>
+            <p class="fw-bold">Taller de Librerías JavaScript</p>
+            <p class="text-muted">Enero 2024</p>
+            <p>Experiencia en maquetado web y consumo de APIs básicas con Vanilla JS.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="display-5 text-center mb-5"><i class="fas fa-envelope text-primary me-2"></i> Contáctame</h2>
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <form id="contactForm" aria-label="Formulario de contacto">
+            <div class="mb-3">
+              <label for="name" class="form-label">Nombre:</label>
+              <input type="text" class="form-control" id="name" required>
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email:</label>
+              <input type="email" class="form-control" id="email" required>
+            </div>
+            <div class="mb-3">
+              <label for="message" class="form-label">Mensaje:</label>
+              <textarea class="form-control" id="message" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Enviar Mensaje</button>
+          </form>
+
+          <div class="text-center mt-5">
+            <h5 class="mb-3">Conéctate en Redes</h5>
+            <a href="https://www.linkedin.com/feed/" target="_blank" class="me-4" aria-label="LinkedIn">
+              <i class="fab fa-linkedin fa-2x text-primary"></i>
+            </a>
+            <a href="https://github.com/Niurvis08/Portafolio-personal" target="_blank" class="me-4 github-link" aria-label="GitHub">
+              <i class="fab fa-github fa-2x"></i>
+            </a>
+            <a href="https://x.com/" target="_blank" class="me-4" aria-label="Twitter">
+              <i class="fab fa-twitter fa-2x text-info"></i>
+            </a>
+            <a href="https://www.instagram.com/ndilone08/?next=%2F" target="_blank" aria-label="Instagram">
+              <i class="fab fa-instagram fa-2x text-danger"></i>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-dark text-white py-4 text-center">
+    <div class="container">
+      <p class="mb-0">© 2025 Niurvis Araujo. Hecho con <i class="fas fa-heart text-danger"></i> y código limpio.</p>
+    </div>
+  </footer>
+
+  <!-- SCRIPTS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
