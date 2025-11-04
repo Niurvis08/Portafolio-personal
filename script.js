@@ -8,13 +8,13 @@ document.addEventListener('DOMContentLoaded', () => {
     // Función para aplicar el modo oscuro
     function applyDarkMode(isDark) {
         if (isDark) {
-            body.classList.add('dark');
-            body.classList.remove('bg-light'); // Asegura la eliminación de la clase de fondo claro
+            body.classList.add('dark-mode'); // 🔄 aquí cambiamos
+            body.classList.remove('bg-light');
             toggleIcon.classList.remove('fa-moon');
             toggleIcon.classList.add('fa-sun');
             localStorage.setItem('darkMode', 'enabled');
         } else {
-            body.classList.remove('dark');
+            body.classList.remove('dark-mode'); // 🔄 aquí también
             toggleIcon.classList.remove('fa-sun');
             toggleIcon.classList.add('fa-moon');
             localStorage.setItem('darkMode', 'disabled');
@@ -30,14 +30,14 @@ document.addEventListener('DOMContentLoaded', () => {
     } else if (storedMode === 'disabled') {
         applyDarkMode(false);
     } else if (prefersDark) {
-        applyDarkMode(true); // Aplica modo oscuro si el sistema lo prefiere y no hay preferencia guardada
+        applyDarkMode(true);
     } else {
-        applyDarkMode(false); // Por defecto en light mode
+        applyDarkMode(false);
     }
 
     // 2. Toggle Mode Dark/Light
     toggleButton.addEventListener('click', () => {
-        const isDark = body.classList.contains('dark');
+        const isDark = body.classList.contains('dark-mode'); // 🔄 cambiamos esto
         applyDarkMode(!isDark);
     });
 
@@ -48,7 +48,8 @@ document.addEventListener('DOMContentLoaded', () => {
             document.querySelector(this.getAttribute('href')).scrollIntoView({
                 behavior: 'smooth'
             });
-            // Cierra el navbar en móviles al hacer click
+
+            // Cierra el navbar en móviles
             const navbarCollapse = document.getElementById('navbarNav');
             const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse);
             if (bsCollapse) {
