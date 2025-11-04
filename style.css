@@ -28,13 +28,14 @@ body {
 body.dark {
     --current-bg: var(--bg-dark);
     --current-text: var(--text-dark); /* El texto será claro en dark mode */
+
     background-color: var(--current-bg);
     color: var(--current-text);
 }
 
 /* Correcciones y Overrides para Dark Mode (asegurando el texto claro) */
 body.dark .bg-light {
-    background: var(--current-bg) !important;
+    background: var(--current-bg) !important; /* El fondo claro debe volverse oscuro */
 }
 
 body.dark .card,
@@ -50,35 +51,11 @@ body.dark .navbar {
 
 body.dark .navbar-brand,
 body.dark .nav-link,
-body.dark .github-link i,
+body.dark .github-link i, /* Icono de GitHub en dark mode */
 body.dark i,
 body.dark .text-muted,
 body.dark .form-label {
     color: var(--current-text) !important;
-}
-
-/* ==== FIX: Color dinámico del ícono de GitHub ==== */
-/* Por defecto (modo claro) */
-.github-link i,
-.github-link svg path {
-    color: var(--text-light) !important;
-    fill: var(--text-light) !important;
-    transition: color 0.3s ease, fill 0.3s ease, transform 0.15s ease;
-}
-
-/* En modo oscuro */
-body.dark .github-link i,
-body.dark .github-link svg path {
-    color: var(--text-dark) !important;
-    fill: var(--text-dark) !important;
-}
-
-/* Efecto hover */
-.github-link i:hover,
-.github-link svg:hover {
-    transform: scale(1.08);
-    color: #6e5494 !important; /* color característico de GitHub */
-    fill: #6e5494 !important;
 }
 
 /* Animación del Hero (Gradient) */
@@ -95,6 +72,8 @@ body.dark .github-link svg path {
 }
 
 /* Animación y Estilo de Componentes */
+
+/* Animación fadeInUp para h1 */
 .animated-h1 {
     opacity: 0;
     animation: fadeInUp 1.5s forwards 0.5s;
@@ -125,7 +104,7 @@ body.dark .github-link svg path {
 .project-card:hover {
     transform: scale(1.05);
     box-shadow: 0 1rem 3rem rgba(0,0,0,.175)!important;
-    animation: none;
+    animation: none; /* Detiene heartbeat al hacer hover */
 }
 
 .project-card {
